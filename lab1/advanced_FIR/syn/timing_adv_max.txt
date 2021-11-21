@@ -1,0 +1,83 @@
+Information: Updating design information... (UID-85)
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FIR_unfolded
+Version: O-2018.06-SP4
+Date   : Sun Nov 21 15:15:54 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: COEFF[90] (input port clocked by MY_CLK)
+  Endpoint: BLOCK_A_FIR/reg_pipe410_10/Q_reg[4]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FIR_unfolded       5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 r
+  COEFF[90] (in)                                          0.00       0.50 r
+  BLOCK_A_FIR/COEFF[90] (FIR_block_2)                     0.00       0.50 r
+  BLOCK_A_FIR/instance_mult_10/B[0] (MULT_N9_22)          0.00       0.50 r
+  BLOCK_A_FIR/instance_mult_10/mult_19/b[0] (MULT_N9_22_DW_mult_tc_1)
+                                                          0.00       0.50 r
+  BLOCK_A_FIR/instance_mult_10/mult_19/U527/Z (BUF_X1)
+                                                          0.09       0.59 r
+  BLOCK_A_FIR/instance_mult_10/mult_19/U506/ZN (XNOR2_X1)
+                                                          0.08       0.67 r
+  BLOCK_A_FIR/instance_mult_10/mult_19/U568/ZN (OAI22_X1)
+                                                          0.04       0.71 f
+  BLOCK_A_FIR/instance_mult_10/mult_19/U163/CO (HA_X1)
+                                                          0.06       0.77 f
+  BLOCK_A_FIR/instance_mult_10/mult_19/U159/S (FA_X1)     0.13       0.90 r
+  BLOCK_A_FIR/instance_mult_10/mult_19/U158/S (FA_X1)     0.11       1.01 f
+  BLOCK_A_FIR/instance_mult_10/mult_19/U382/ZN (NAND2_X1)
+                                                          0.04       1.05 r
+  BLOCK_A_FIR/instance_mult_10/mult_19/U370/ZN (INV_X1)
+                                                          0.02       1.07 f
+  BLOCK_A_FIR/instance_mult_10/mult_19/U536/ZN (AOI21_X1)
+                                                          0.06       1.13 r
+  BLOCK_A_FIR/instance_mult_10/mult_19/U334/ZN (OAI21_X2)
+                                                          0.05       1.18 f
+  BLOCK_A_FIR/instance_mult_10/mult_19/U362/ZN (AOI21_X1)
+                                                          0.06       1.24 r
+  BLOCK_A_FIR/instance_mult_10/mult_19/U582/ZN (OAI21_X1)
+                                                          0.04       1.28 f
+  BLOCK_A_FIR/instance_mult_10/mult_19/U571/ZN (XNOR2_X1)
+                                                          0.06       1.33 f
+  BLOCK_A_FIR/instance_mult_10/mult_19/product[12] (MULT_N9_22_DW_mult_tc_1)
+                                                          0.00       1.33 f
+  BLOCK_A_FIR/instance_mult_10/M[4] (MULT_N9_22)          0.00       1.33 f
+  BLOCK_A_FIR/reg_pipe410_10/D[4] (REG_N10_67)            0.00       1.33 f
+  BLOCK_A_FIR/reg_pipe410_10/U16/ZN (AOI22_X1)            0.05       1.39 r
+  BLOCK_A_FIR/reg_pipe410_10/U17/ZN (INV_X1)              0.02       1.41 f
+  BLOCK_A_FIR/reg_pipe410_10/Q_reg[4]/D (DFF_X1)          0.01       1.42 f
+  data arrival time                                                  1.42
+
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                      -0.07      -0.07
+  BLOCK_A_FIR/reg_pipe410_10/Q_reg[4]/CK (DFF_X1)         0.00      -0.07 r
+  library setup time                                     -0.04      -0.11
+  data required time                                                -0.11
+  --------------------------------------------------------------------------
+  data required time                                                -0.11
+  data arrival time                                                 -1.42
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.53
+
+
+1

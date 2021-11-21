@@ -1,0 +1,99 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FIR_unfolded
+Version: O-2018.06-SP4
+Date   : Sun Nov 21 15:44:02 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: COEFF[2] (input port clocked by MY_CLK)
+  Endpoint: BLOCK_C_FIR/reg_pipe03_0/Q_reg[9]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FIR_unfolded       5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 r
+  COEFF[2] (in)                                           0.00       0.50 r
+  BLOCK_C_FIR/COEFF[2] (FIR_block_0)                      0.00       0.50 r
+  BLOCK_C_FIR/instance_mult_0/B[2] (MULT_N9_10)           0.00       0.50 r
+  BLOCK_C_FIR/instance_mult_0/mult_19/b[2] (MULT_N9_10_DW_mult_tc_0)
+                                                          0.00       0.50 r
+  BLOCK_C_FIR/instance_mult_0/mult_19/U340/ZN (XNOR2_X1)
+                                                          0.07       0.57 r
+  BLOCK_C_FIR/instance_mult_0/mult_19/U339/ZN (OAI22_X1)
+                                                          0.04       0.61 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U235/ZN (AND3_X1)
+                                                          0.04       0.65 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U233/Z (MUX2_X1)
+                                                          0.07       0.72 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U334/ZN (AOI222_X1)
+                                                          0.10       0.82 r
+  BLOCK_C_FIR/instance_mult_0/mult_19/U221/ZN (INV_X1)
+                                                          0.03       0.85 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U333/ZN (AOI222_X1)
+                                                          0.09       0.94 r
+  BLOCK_C_FIR/instance_mult_0/mult_19/U220/ZN (INV_X1)
+                                                          0.03       0.97 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U332/ZN (AOI222_X1)
+                                                          0.09       1.06 r
+  BLOCK_C_FIR/instance_mult_0/mult_19/U217/ZN (INV_X1)
+                                                          0.03       1.09 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U331/ZN (AOI222_X1)
+                                                          0.09       1.18 r
+  BLOCK_C_FIR/instance_mult_0/mult_19/U216/ZN (INV_X1)
+                                                          0.03       1.21 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U330/ZN (AOI222_X1)
+                                                          0.09       1.30 r
+  BLOCK_C_FIR/instance_mult_0/mult_19/U219/ZN (INV_X1)
+                                                          0.03       1.33 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U11/CO (FA_X1)      0.09       1.42 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U10/CO (FA_X1)      0.09       1.51 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U9/CO (FA_X1)       0.09       1.60 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U8/CO (FA_X1)       0.09       1.69 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U7/CO (FA_X1)       0.09       1.78 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U6/CO (FA_X1)       0.09       1.87 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U5/CO (FA_X1)       0.09       1.96 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U4/CO (FA_X1)       0.09       2.06 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U3/CO (FA_X1)       0.09       2.15 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U245/Z (XOR2_X1)
+                                                          0.08       2.22 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/U243/Z (XOR2_X1)
+                                                          0.07       2.29 f
+  BLOCK_C_FIR/instance_mult_0/mult_19/product[17] (MULT_N9_10_DW_mult_tc_0)
+                                                          0.00       2.29 f
+  BLOCK_C_FIR/instance_mult_0/M[9] (MULT_N9_10)           0.00       2.29 f
+  BLOCK_C_FIR/reg_pipe03_0/D[9] (REG_N10_25)              0.00       2.29 f
+  BLOCK_C_FIR/reg_pipe03_0/U14/ZN (AOI22_X1)              0.04       2.33 r
+  BLOCK_C_FIR/reg_pipe03_0/U13/ZN (INV_X1)                0.02       2.35 f
+  BLOCK_C_FIR/reg_pipe03_0/Q_reg[9]/D (DFF_X1)            0.01       2.36 f
+  data arrival time                                                  2.36
+
+  clock MY_CLK (rise edge)                                6.12       6.12
+  clock network delay (ideal)                             0.00       6.12
+  clock uncertainty                                      -0.07       6.05
+  BLOCK_C_FIR/reg_pipe03_0/Q_reg[9]/CK (DFF_X1)           0.00       6.05 r
+  library setup time                                     -0.04       6.01
+  data required time                                                 6.01
+  --------------------------------------------------------------------------
+  data required time                                                 6.01
+  data arrival time                                                 -2.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        3.65
+
+
+1

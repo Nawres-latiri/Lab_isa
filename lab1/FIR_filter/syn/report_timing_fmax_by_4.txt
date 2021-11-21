@@ -1,0 +1,136 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FIR_filter
+Version: O-2018.06-SP4
+Date   : Sat Nov 20 19:05:36 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: COEFF[11] (input port clocked by MY_CLK)
+  Endpoint: reg_dout/Q_reg[8]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FIR_filter         5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 r
+  COEFF[11] (in)                                          0.00       0.50 r
+  queue_mult_1/B[2] (MULT_N9_9)                           0.00       0.50 r
+  queue_mult_1/mult_19/b[2] (MULT_N9_9_DW_mult_tc_0)      0.00       0.50 r
+  queue_mult_1/mult_19/U340/ZN (XNOR2_X1)                 0.06       0.56 r
+  queue_mult_1/mult_19/U339/ZN (OAI22_X1)                 0.04       0.60 f
+  queue_mult_1/mult_19/U238/ZN (AND3_X1)                  0.04       0.65 f
+  queue_mult_1/mult_19/U236/Z (MUX2_X1)                   0.07       0.71 f
+  queue_mult_1/mult_19/U334/ZN (AOI222_X1)                0.10       0.81 r
+  queue_mult_1/mult_19/U219/ZN (INV_X1)                   0.03       0.84 f
+  queue_mult_1/mult_19/U333/ZN (AOI222_X1)                0.09       0.93 r
+  queue_mult_1/mult_19/U218/ZN (INV_X1)                   0.03       0.96 f
+  queue_mult_1/mult_19/U332/ZN (AOI222_X1)                0.09       1.05 r
+  queue_mult_1/mult_19/U217/ZN (INV_X1)                   0.03       1.08 f
+  queue_mult_1/mult_19/U331/ZN (AOI222_X1)                0.09       1.18 r
+  queue_mult_1/mult_19/U216/ZN (INV_X1)                   0.03       1.20 f
+  queue_mult_1/mult_19/U330/ZN (AOI222_X1)                0.09       1.30 r
+  queue_mult_1/mult_19/U224/ZN (INV_X1)                   0.03       1.32 f
+  queue_mult_1/mult_19/U11/CO (FA_X1)                     0.09       1.41 f
+  queue_mult_1/mult_19/U10/CO (FA_X1)                     0.09       1.50 f
+  queue_mult_1/mult_19/U9/CO (FA_X1)                      0.09       1.59 f
+  queue_mult_1/mult_19/U8/CO (FA_X1)                      0.09       1.68 f
+  queue_mult_1/mult_19/U7/CO (FA_X1)                      0.09       1.77 f
+  queue_mult_1/mult_19/U6/CO (FA_X1)                      0.09       1.87 f
+  queue_mult_1/mult_19/U5/CO (FA_X1)                      0.09       1.96 f
+  queue_mult_1/mult_19/U4/CO (FA_X1)                      0.09       2.05 f
+  queue_mult_1/mult_19/U3/CO (FA_X1)                      0.09       2.14 f
+  queue_mult_1/mult_19/U245/Z (XOR2_X1)                   0.08       2.21 f
+  queue_mult_1/mult_19/U243/Z (XOR2_X1)                   0.07       2.28 f
+  queue_mult_1/mult_19/product[17] (MULT_N9_9_DW_mult_tc_0)
+                                                          0.00       2.28 f
+  queue_mult_1/M[9] (MULT_N9_9)                           0.00       2.28 f
+  queue_add_1/B[9] (ADDER_N10_9)                          0.00       2.28 f
+  queue_add_1/add_16/B[9] (ADDER_N10_9_DW01_add_0)        0.00       2.28 f
+  queue_add_1/add_16/U1_9/S (FA_X1)                       0.15       2.43 r
+  queue_add_1/add_16/SUM[9] (ADDER_N10_9_DW01_add_0)      0.00       2.43 r
+  queue_add_1/S[9] (ADDER_N10_9)                          0.00       2.43 r
+  queue_add_2/A[9] (ADDER_N10_8)                          0.00       2.43 r
+  queue_add_2/add_16/A[9] (ADDER_N10_8_DW01_add_0)        0.00       2.43 r
+  queue_add_2/add_16/U1_9/S (FA_X1)                       0.12       2.55 f
+  queue_add_2/add_16/SUM[9] (ADDER_N10_8_DW01_add_0)      0.00       2.55 f
+  queue_add_2/S[9] (ADDER_N10_8)                          0.00       2.55 f
+  queue_add_3/A[9] (ADDER_N10_7)                          0.00       2.55 f
+  queue_add_3/add_16/A[9] (ADDER_N10_7_DW01_add_0)        0.00       2.55 f
+  queue_add_3/add_16/U1_9/S (FA_X1)                       0.15       2.69 r
+  queue_add_3/add_16/SUM[9] (ADDER_N10_7_DW01_add_0)      0.00       2.69 r
+  queue_add_3/S[9] (ADDER_N10_7)                          0.00       2.69 r
+  queue_add_4/A[9] (ADDER_N10_6)                          0.00       2.69 r
+  queue_add_4/add_16/A[9] (ADDER_N10_6_DW01_add_0)        0.00       2.69 r
+  queue_add_4/add_16/U1_9/S (FA_X1)                       0.12       2.81 f
+  queue_add_4/add_16/SUM[9] (ADDER_N10_6_DW01_add_0)      0.00       2.81 f
+  queue_add_4/S[9] (ADDER_N10_6)                          0.00       2.81 f
+  queue_add_5/A[9] (ADDER_N10_5)                          0.00       2.81 f
+  queue_add_5/add_16/A[9] (ADDER_N10_5_DW01_add_0)        0.00       2.81 f
+  queue_add_5/add_16/U1_9/S (FA_X1)                       0.15       2.96 r
+  queue_add_5/add_16/SUM[9] (ADDER_N10_5_DW01_add_0)      0.00       2.96 r
+  queue_add_5/S[9] (ADDER_N10_5)                          0.00       2.96 r
+  queue_add_6/A[9] (ADDER_N10_4)                          0.00       2.96 r
+  queue_add_6/add_16/A[9] (ADDER_N10_4_DW01_add_0)        0.00       2.96 r
+  queue_add_6/add_16/U1_9/S (FA_X1)                       0.12       3.07 f
+  queue_add_6/add_16/SUM[9] (ADDER_N10_4_DW01_add_0)      0.00       3.07 f
+  queue_add_6/S[9] (ADDER_N10_4)                          0.00       3.07 f
+  queue_add_7/A[9] (ADDER_N10_3)                          0.00       3.07 f
+  queue_add_7/add_16/A[9] (ADDER_N10_3_DW01_add_0)        0.00       3.07 f
+  queue_add_7/add_16/U1_9/S (FA_X1)                       0.15       3.22 r
+  queue_add_7/add_16/SUM[9] (ADDER_N10_3_DW01_add_0)      0.00       3.22 r
+  queue_add_7/S[9] (ADDER_N10_3)                          0.00       3.22 r
+  queue_add_8/A[9] (ADDER_N10_2)                          0.00       3.22 r
+  queue_add_8/add_16/A[9] (ADDER_N10_2_DW01_add_0)        0.00       3.22 r
+  queue_add_8/add_16/U1_9/S (FA_X1)                       0.12       3.34 f
+  queue_add_8/add_16/SUM[9] (ADDER_N10_2_DW01_add_0)      0.00       3.34 f
+  queue_add_8/S[9] (ADDER_N10_2)                          0.00       3.34 f
+  queue_add_9/A[9] (ADDER_N10_1)                          0.00       3.34 f
+  queue_add_9/add_16/A[9] (ADDER_N10_1_DW01_add_0)        0.00       3.34 f
+  queue_add_9/add_16/U1_9/S (FA_X1)                       0.15       3.48 r
+  queue_add_9/add_16/SUM[9] (ADDER_N10_1_DW01_add_0)      0.00       3.48 r
+  queue_add_9/S[9] (ADDER_N10_1)                          0.00       3.48 r
+  queue_add_10/A[9] (ADDER_N10_0)                         0.00       3.48 r
+  queue_add_10/add_16/A[9] (ADDER_N10_0_DW01_add_0)       0.00       3.48 r
+  queue_add_10/add_16/U1_9/S (FA_X1)                      0.12       3.61 f
+  queue_add_10/add_16/SUM[9] (ADDER_N10_0_DW01_add_0)     0.00       3.61 f
+  queue_add_10/S[9] (ADDER_N10_0)                         0.00       3.61 f
+  saturation_stage/SEL[1] (MUX_4to1_N9)                   0.00       3.61 f
+  saturation_stage/U3/ZN (NOR2_X1)                        0.14       3.74 r
+  saturation_stage/U16/ZN (AOI22_X1)                      0.06       3.80 f
+  saturation_stage/U6/ZN (NAND2_X1)                       0.03       3.83 r
+  saturation_stage/Y[8] (MUX_4to1_N9)                     0.00       3.83 r
+  reg_dout/D[8] (REG_N9_0)                                0.00       3.83 r
+  reg_dout/U6/ZN (AOI22_X1)                               0.03       3.86 f
+  reg_dout/U5/ZN (INV_X1)                                 0.03       3.89 r
+  reg_dout/Q_reg[8]/D (DFF_X1)                            0.01       3.90 r
+  data arrival time                                                  3.90
+
+  clock MY_CLK (rise edge)                               13.24      13.24
+  clock network delay (ideal)                             0.00      13.24
+  clock uncertainty                                      -0.07      13.17
+  reg_dout/Q_reg[8]/CK (DFF_X1)                           0.00      13.17 r
+  library setup time                                     -0.03      13.14
+  data required time                                                13.14
+  --------------------------------------------------------------------------
+  data required time                                                13.14
+  data arrival time                                                 -3.90
+  --------------------------------------------------------------------------
+  slack (MET)                                                        9.24
+
+
+1
